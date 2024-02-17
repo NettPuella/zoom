@@ -32,12 +32,11 @@ const httpServer = http.createServer(app);
 const wsServer = new Server(httpServer, {
     cors: {
         origin: ["https://admin.socket.io"],
-        credentials: true    
+        credentials: true,    
     },
 });
 instrument(wsServer, {
     auth: false,
-    mode: "development",
 });
 
 ////////////////////// 1. WebSocket 사용하기 ///////////////////////////////////////
